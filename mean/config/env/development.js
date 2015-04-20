@@ -2,7 +2,7 @@
 
 module.exports = {
 	db: {
-		uri: 'mongodb://localhost/octo-mock2',
+		uri: 'mongodb://heroku_app35075607:ia57unnk0n52eu06f0tioe0fla@ds053607.mongolab.com:53607/heroku_app35075607',
 		options: {
 			user: '',
 			pass: ''
