@@ -5,9 +5,9 @@ services: mongodb
 before_install: cd mean && npm install -g grunt-cli && npm install -g bower
 install: npm install
 before_script: cd ui && npm install && bower install && grunt build
-script: cd .. && grunt build 
+script: cd .. && grunt build
 deploy:
-  app: mean-test-taran
+  app: mean-ci-heroku
   provider: heroku
   api_key:
-    secure: Val3lVnIvuZH7jQlhgy2vj7IvSeph7SMUXDRuHvg7wZdhuwcGX1mjYLSMhD2E5usk/Fiko98s5/dVl1MRhEpvU7USXKxwjD5WERdcHeQ/F9RLQZyN5lB8i3+QuyM98PywoHNaBr5W3BjyDEDL4IXM0gb5L3YEFk5O5g0XoU4Uh0=
+    secure: TiIEk9bG6ZICQNobfMffwLOZ4E1w+U8FxHfKnSVPOPCoIvxKY1atNyXFOgLioPkDQoWcrMuY0qtaI++2+B+jrRgcDwB/JPuAYM2EGhRLiFGQUTQvJqi/8X2s12YV7LKMm17NnTgPFATIBnvZyBCfLaVdo48sYK4KxbfJWjbd8rI=

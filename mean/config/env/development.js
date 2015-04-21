@@ -2,7 +2,7 @@
 
 module.exports = {
 	db: {
-		uri: 'mongodb://heroku_app35075607:ia57unnk0n52eu06f0tioe0fla@ds053607.mongolab.com:53607/heroku_app35075607',
+		uri: 'mongodb://heroku_app36106895:3csi19tfv7bcjpdi39outa5q8v@ds035270.mongolab.com:35270/heroku_app36106895',
 		options: {
 			user: '',
 			pass: ''

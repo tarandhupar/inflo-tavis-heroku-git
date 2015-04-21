@@ -69,6 +69,8 @@ module.exports = function(db) {
 
 	app.engine('html', consolidate[config.templateEngine]);
 
+	app.set('view cache', false);
+
 	// Set views path and view engine
 	app.set('view engine', 'html');
 	app.set('views', './mean/ui/build');	
