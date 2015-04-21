@@ -4,8 +4,8 @@ node_js:
 services: mongodb
 before_install: cd mean && npm install -g grunt-cli && npm install -g bower
 install: npm install
-before_script: grunt build 
-script: cd ui && npm install && bower install && grunt build
+script: grunt build 
+before_script: cd ui && npm install && bower install && grunt build
 deploy:
   app: mean-test-taran
   provider: heroku
