@@ -2,10 +2,10 @@ language: node_js
 node_js:
 - '0.10'
 services: mongodb
-before_install: cd mean && npm install -g grunt-cli
+before_install: cd mean && npm install -g grunt-cli && npm install -g bower
 install: npm install
 before_script: grunt build 
-script: cd ui && npm install  && grunt build
+script: cd ui && npm install && bower install && grunt build
 deploy:
   app: mean-test-taran
   provider: heroku
