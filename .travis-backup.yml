@@ -1,0 +1,26 @@
+language: node_js
+node_js:
+- '0.10'
+services: mongodb
+install: npm install
+before_script:
+  - cd ui
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - npm install --quiet -g grunt-cli karma bower
+  - npm install
+  - bower install
+
+
+script: grunt build
+
+before_deploy: cd $TRAVIS_BUILD_DIR \ && "echo ls "
+
+deploy:
+  provider: opsworks
+  access_key_id: AKIAJVMHWZLOBIZLU5KA
+  secret_access_key:
+    secure: JHfk0xlEIV/+JrWr6Km2rpYZCUSPe+Yk5cxZD0Bplj7ufjoM+A3Jwc6oDAsPVldRx8r3eARWhd1wug9lk2iEKkMUCKmlwC8hKhLQq8B9G9xKcW4R/AGUGg+K9a3+H5Lew2lSQyTUY9pGeSt6qaYqU3HWT3aJYqB8X3jqK5Mf600=
+  app-id: a8c58522-9f5d-43c8-8ea6-649e79bc9e7e
+  on:
+    repo: tarandhupar/inflo-tavis-heroku-git
