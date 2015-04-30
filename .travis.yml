@@ -10,8 +10,9 @@ before_script:
   - npm install --quiet -g grunt-cli karma bower
   - npm install
   - bower install
+  - grunt build
 
-script: grunt build
+script: grunt 
 
 deploy:
   provider: opsworks
