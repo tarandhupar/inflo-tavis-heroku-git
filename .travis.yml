@@ -11,6 +11,6 @@ deploy:
   access_key_id: AKIAJVMHWZLOBIZLU5KA
   secret_access_key:
     secure: JHfk0xlEIV/+JrWr6Km2rpYZCUSPe+Yk5cxZD0Bplj7ufjoM+A3Jwc6oDAsPVldRx8r3eARWhd1wug9lk2iEKkMUCKmlwC8hKhLQq8B9G9xKcW4R/AGUGg+K9a3+H5Lew2lSQyTUY9pGeSt6qaYqU3HWT3aJYqB8X3jqK5Mf600=
-  app-id: d9001a20-cf32-4922-9844-4ba66bb5f3dd
+  app-id: a8c58522-9f5d-43c8-8ea6-649e79bc9e7e
   on:
     repo: tarandhupar/inflo-tavis-heroku-git
