@@ -2,12 +2,15 @@ language: node_js
 node_js:
 - '0.10'
 services: mongodb
-before_install: cd mean && npm install -g grunt-cli && npm install -g bower
+before_install: npm install -g grunt-cli && npm install -g bower
 install: npm install
 before_script: cd ui && npm install && bower install && grunt build
-script: cd .. && grunt build
+
 deploy:
-  app: mean-ci-heroku
-  provider: heroku
-  api_key:
-    secure: TiIEk9bG6ZICQNobfMffwLOZ4E1w+U8FxHfKnSVPOPCoIvxKY1atNyXFOgLioPkDQoWcrMuY0qtaI++2+B+jrRgcDwB/JPuAYM2EGhRLiFGQUTQvJqi/8X2s12YV7LKMm17NnTgPFATIBnvZyBCfLaVdo48sYK4KxbfJWjbd8rI=
+  provider: opsworks
+  access_key_id: AKIAJVMHWZLOBIZLU5KA
+  secret_access_key:
+    secure: JHfk0xlEIV/+JrWr6Km2rpYZCUSPe+Yk5cxZD0Bplj7ufjoM+A3Jwc6oDAsPVldRx8r3eARWhd1wug9lk2iEKkMUCKmlwC8hKhLQq8B9G9xKcW4R/AGUGg+K9a3+H5Lew2lSQyTUY9pGeSt6qaYqU3HWT3aJYqB8X3jqK5Mf600=
+  app-id: d9001a20-cf32-4922-9844-4ba66bb5f3dd
+  on:
+    repo: tarandhupar/inflo-tavis-heroku-git
