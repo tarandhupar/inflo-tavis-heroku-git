@@ -2,7 +2,7 @@
 
 module.exports = {
 	db: {
-		uri: 'mongodb://52.6.200.140:27017/octo-mock2',
+		uri: 'mongodb://52.6.184.172:27017/octo-mock2',
 		options: {
 			user: '',
 			pass: ''
