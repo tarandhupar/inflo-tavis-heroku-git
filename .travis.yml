@@ -13,9 +13,8 @@ before_script:
   - bower install  
 
 script: grunt 
-after_script:  
-- ls -l "$TRAVIS_BUILD_DIR"/ui
 before_deploy:
+- pwd
 - ls -l "$TRAVIS_BUILD_DIR"/ui
 
 deploy:
@@ -24,5 +23,4 @@ deploy:
   secret_access_key:
     secure: JHfk0xlEIV/+JrWr6Km2rpYZCUSPe+Yk5cxZD0Bplj7ufjoM+A3Jwc6oDAsPVldRx8r3eARWhd1wug9lk2iEKkMUCKmlwC8hKhLQq8B9G9xKcW4R/AGUGg+K9a3+H5Lew2lSQyTUY9pGeSt6qaYqU3HWT3aJYqB8X3jqK5Mf600=
   app-id: a8c58522-9f5d-43c8-8ea6-649e79bc9e7e
-  on:
-    repo: tarandhupar/inflo-tavis-heroku-git
+  
