@@ -15,6 +15,7 @@ before_script:
 script: grunt 
 before_deploy:
 - pwd
+- ls -l
 - ls -l "$TRAVIS_BUILD_DIR"/ui
 
 deploy:
