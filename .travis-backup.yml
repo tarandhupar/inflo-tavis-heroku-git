@@ -4,6 +4,7 @@ node_js:
 services: mongodb
 install: npm install
 before_script:
+  - ls -l "$TRAVIS_BUILD_DIR"
   - cd ui
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
@@ -14,7 +15,8 @@ before_script:
 
 script: grunt build
 
-before_deploy:  "echo 'ready?'"
+after_script:  
+- ls -l "$TRAVIS_BUILD_DIR"
 
 deploy:
   provider: opsworks
