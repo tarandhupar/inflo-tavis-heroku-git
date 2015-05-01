@@ -14,7 +14,7 @@ before_script:
 
 script: grunt build
 
-before_deploy:  "echo $TRAVIS_BUILD_DIR "
+before_deploy:  "echo 'ready?'"
 
 deploy:
   provider: opsworks
